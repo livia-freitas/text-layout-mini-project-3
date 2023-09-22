@@ -38,7 +38,7 @@ public class TextBlockTests {
     TBUtils.print(pen, empty_trunk);
 
     // Truncated block with larger width than the original block
-    Truncated wide_trunk = new Truncated(block, 13); // TBH I'm not sure what to do here... it's not printing anything. should I add another if
+    Truncated wide_trunk = new Truncated(block, 30); 
     TBUtils.print(pen, wide_trunk);
  
      // Clean up after ourselves.

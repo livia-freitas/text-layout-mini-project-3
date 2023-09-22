@@ -23,7 +23,13 @@ public class Truncated implements TextBlock {
   public String row(int i) throws Exception {
     int h = this.contents.height();
     if ((i >= 0) && (i <= h)) {
-      return this.contents.row(i).substring(0, this.new_width);
+      if (this.new_width > this.contents.width()){
+        String trunk_space = TBUtils.spaces(this.new_width - this.contents.width());
+        String new_row = this.contents.row(i).concat(trunk_space);
+        return new_row;
+      } else{
+        return this.contents.row(i).substring(0, this.new_width);
+      }
     }
     // Everything else
     else {
@@ -42,7 +48,7 @@ public class Truncated implements TextBlock {
    * Determine how many columns are in the block.
    */
   public int width() {
-    return this.contents.width();
+    return this.new_width;
   }
 }
 
