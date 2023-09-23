@@ -14,3 +14,9 @@ https://www.geeksforgeeks.org/character-array-in-java/
 
 Was having trouble with adding elements to an array
 https://www.geeksforgeeks.org/how-to-add-an-element-to-an-array-in-java/
+
+instanceof comparator
+https://www.javatpoint.com/downcasting-with-instanceof-operator
+
+not operator in java
+https://www.baeldung.com/java-using-not-in-if-conditions
