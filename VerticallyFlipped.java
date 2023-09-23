@@ -1,15 +1,9 @@
 package lab.polymorphism;
 
-/**
- * Author: Livia Stein Freitas
- * Given a TextBlock, flips it horizontally.
- */
-
-public class HorizontallyFlipped implements TextBlock{
-
+public class VerticallyFlipped implements TextBlock{
   TextBlock contents;
 
-  public HorizontallyFlipped(TextBlock _contents) {
+  public VerticallyFlipped(TextBlock _contents) {
     this.contents = _contents;
   }
    /**
@@ -21,18 +15,7 @@ public class HorizontallyFlipped implements TextBlock{
   public String row(int i) throws Exception { 
     int h = this.contents.height();
     if ((i >= 0) && (i <= h)) {
-
-     String newRow = "";
-     String theRow = this.contents.row(i);
-     int row_length = theRow.length();
-     int m;
-
-     for (m = 0; m < row_length; m++) {
-      char inv_char = theRow.charAt(row_length - m - 1);
-      String inv_string = String.valueOf(inv_char);
-      newRow = newRow.concat(inv_string);
-     }
-     return newRow;
+     return this.contents.row(h - i - 1);
     } else {
       throw new Exception("Invalid row " + i);
     }
@@ -51,5 +34,4 @@ public class HorizontallyFlipped implements TextBlock{
   public int width() {
     return this.contents.width();
   }
-
 }

@@ -147,6 +147,32 @@ public class TextBlockTests {
      pen.println("\n-> HorizontallyFlipped + VComposition test:\n");
      TBUtils.print(pen, VCompose_HorizontallyFlipped);
      
+    /**
+    * VerticallyFlipped TESTS 
+    */
+
+    pen.println("\n\n --VerticallyFlipped TESTS-- \n\n");
+
+     // Create and print a VerticallyFlipped version of a basic TextBlock
+     VerticallyFlipped TB_VerticallyFlipped = new VerticallyFlipped(block);
+     pen.println("\n-> VerticallyFlipped + Basic TextBlock test:\n");
+     TBUtils.print(pen, TB_VerticallyFlipped);
+
+     // Create and print a VerticallyFlipped version of a BoxedBlock
+     VerticallyFlipped box_VerticallyFlipped = new VerticallyFlipped(box);
+     pen.println("\n-> VerticallyFlipped + BoxedBlock test:\n");
+     TBUtils.print(pen, box_VerticallyFlipped);
+
+     // Create and print a VerticallyFlipped version of a horizontal composition
+     VerticallyFlipped HCompose_VerticallyFlipped = new VerticallyFlipped(HCompose);
+     pen.println("\n-> VerticallyFlipped + HComposition test:\n");
+     TBUtils.print(pen, HCompose_VerticallyFlipped);
+ 
+     // Create and print a VerticallyFlipped version of a vertical composition
+     VerticallyFlipped VCompose_VerticallyFlipped = new VerticallyFlipped(VCompose);
+     pen.println("\n-> VerticallyFlipped + VComposition test:\n");
+     TBUtils.print(pen, VCompose_VerticallyFlipped);
+     
      // Clean up after ourselves.
      pen.close();
   }
