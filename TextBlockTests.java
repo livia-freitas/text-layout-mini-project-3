@@ -121,6 +121,32 @@ public class TextBlockTests {
     pen.println("\n-> RightJustified + larger new width test:\n");
     TBUtils.print(pen, wide_RightJustified);
  
+    /**
+    * HorizontallyFlipped TESTS 
+    */
+
+    pen.println("\n\n --HorizontallyFlipped TESTS-- \n\n");
+
+     // Create and print a HorizontallyFlipped version of a basic TextBlock
+     HorizontallyFlipped TB_HorizontallyFlipped = new HorizontallyFlipped(block);
+     pen.println("\n-> HorizontallyFlipped + Basic TextBlock test:\n");
+     TBUtils.print(pen, TB_HorizontallyFlipped);
+
+     // Create and print a HorizontallyFlipped version of a BoxedBlock
+     HorizontallyFlipped box_HorizontallyFlipped = new HorizontallyFlipped(box);
+     pen.println("\n-> HorizontallyFlipped + BoxedBlock test:\n");
+     TBUtils.print(pen, box_HorizontallyFlipped);
+    
+     // Create and print a HorizontallyFlipped version of a horizontal composition
+     HorizontallyFlipped HCompose_HorizontallyFlipped = new HorizontallyFlipped(HCompose);
+     pen.println("\n-> HorizontallyFlipped + HComposition test:\n");
+     TBUtils.print(pen, HCompose_HorizontallyFlipped);
+ 
+     // Create and print a HorizontallyFlipped version of a vertical composition
+     HorizontallyFlipped VCompose_HorizontallyFlipped = new HorizontallyFlipped(VCompose);
+     pen.println("\n-> HorizontallyFlipped + VComposition test:\n");
+     TBUtils.print(pen, VCompose_HorizontallyFlipped);
+     
      // Clean up after ourselves.
      pen.close();
   }
