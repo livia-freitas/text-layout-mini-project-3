@@ -20,3 +20,6 @@ https://www.javatpoint.com/downcasting-with-instanceof-operator
 
 not operator in java
 https://www.baeldung.com/java-using-not-in-if-conditions
+
+How to return an array in java
+https://www.scaler.com/topics/how-to-return-array-in-java/
