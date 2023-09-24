@@ -23,14 +23,10 @@ public class RightJustified implements TextBlock{
   public String row(int i) throws Exception {
     int h = this.contents.height();
     if ((i >= 0) && (i <= h)) {
-      if (this.new_width < this.contents.width()) {
-        throw new Exception("New width must be equal to or larger than original width.");
-      } else {
         int num_spaces = this.new_width - this.contents.width();
         String right_spaces = TBUtils.spaces(num_spaces);
         String new_row = right_spaces.concat(this.contents.row(i));
         return new_row;
-      }
     } else {
       throw new Exception("Invalid row " + i);
     }
@@ -48,5 +44,13 @@ public class RightJustified implements TextBlock{
    */
   public int width() {
     return this.new_width;
+  }
+
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {TBUtils.toString(this.contents), this.new_width};
+    return contentsArray;
   }
 }

@@ -29,4 +29,12 @@ public interface TextBlock {
    */
   public int width();
 
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents();
+
+  
+
+
 } // interface TextBlock

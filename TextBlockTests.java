@@ -172,6 +172,47 @@ public class TextBlockTests {
      VerticallyFlipped VCompose_VerticallyFlipped = new VerticallyFlipped(VCompose);
      pen.println("\n-> VerticallyFlipped + VComposition test:\n");
      TBUtils.print(pen, VCompose_VerticallyFlipped);
+
+     /**
+    * SpacedOut TESTS 
+    */
+
+    pen.println("\n\n --SpacedOut TESTS-- \n\n");
+
+    // Create and print a SpacedOut version of a basic TextBlock
+    SpacedOut TB_SpacedOut = new SpacedOut(block);
+    pen.println("\n-> SpacedOut + Basic TextBlock test:\n");
+    TBUtils.print(pen, TB_SpacedOut);
+
+    // Create and print a SpacedOut version of a BoxedBlock
+    SpacedOut box_SpacedOut = new SpacedOut(box);
+    pen.println("\n-> SpacedOut + BoxedBlock test:\n");
+    TBUtils.print(pen, box_SpacedOut);
+
+    // Create and print a SpacedOut version of a horizontal composition
+    SpacedOut HCompose_SpacedOut = new SpacedOut(HCompose);
+    pen.println("\n-> SpacedOut + HComposition test:\n");
+    TBUtils.print(pen, HCompose_SpacedOut);
+
+    // Create and print a SpacedOut version of a vertical composition
+    SpacedOut VCompose_SpacedOut = new SpacedOut(VCompose);
+    pen.println("\n-> SpacedOut + VComposition test:\n");
+    TBUtils.print(pen, VCompose_SpacedOut);
+
+    /**
+     * TBUtils tests
+     */
+    
+    pen.println("\n\n --TBUtils TESTS-- \n\n");
+    //pen.println("eq test 1 (different TBs) -> should be false, is " + TBUtils.eq(block, box));
+    //pen.println("eqv test 1 (different TBs) -> should be false, is " + TBUtils.eqv(block, box));
+    pen.println("eqv test 2 (same TB) -> should be true, is " + TBUtils.eqv(new Centered(box, 15), new Centered(box, 10)));
+    
+    /**
+     * COMPOSITION TESTS
+     */
+
+    
      
      // Clean up after ourselves.
      pen.close();

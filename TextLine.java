@@ -58,4 +58,11 @@ public class TextLine implements TextBlock {
     return this.line.length();
   } // width()
 
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {this.line};
+    return contentsArray;
+  }
 } // class TextLine

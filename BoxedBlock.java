@@ -67,4 +67,13 @@ public class BoxedBlock implements TextBlock {
     return 2 + this.contents.width();
   } // width()
 
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {TBUtils.toString(this.contents)};
+    return contentsArray;
+  }
+
+  
 } // class BoxedBlock

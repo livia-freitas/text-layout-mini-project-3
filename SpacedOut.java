@@ -51,4 +51,12 @@ public class SpacedOut implements TextBlock{
   public int width() {
     return this.contents.width();
   }
+
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {TBUtils.toString(this.contents)};
+    return contentsArray;
+  }
 }

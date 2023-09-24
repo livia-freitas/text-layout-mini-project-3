@@ -86,4 +86,11 @@ public class HComposition implements TextBlock {
     return this.left.width() + this.right.width();
   } // width()
 
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {TBUtils.toString(this.left), TBUtils.toString(this.right)};
+    return contentsArray;
+  }
 } // class HComposition

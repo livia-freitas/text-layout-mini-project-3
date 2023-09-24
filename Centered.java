@@ -51,4 +51,12 @@ public class Centered implements TextBlock {
   public int width() {
     return this.new_width;
   }
+
+  /**
+   * Returns the content of the fields of the TextBlock.
+   */
+  public Object[] getContents(){
+    Object[] contentsArray = {TBUtils.toString(this.contents), this.new_width};
+    return contentsArray;
+  }
 }
