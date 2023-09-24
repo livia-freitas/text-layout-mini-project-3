@@ -206,8 +206,8 @@ public class TextBlockTests {
     pen.println("\n\n --TBUtils TESTS-- \n\n");
     //pen.println("eq test 1 (different TBs) -> should be false, is " + TBUtils.eq(block, box));
     //pen.println("eqv test 1 (different TBs) -> should be false, is " + TBUtils.eqv(block, box));
-    pen.println("eqv test 2 (same TB) -> should be true, is " + TBUtils.eqv(new Centered(box, 15), new Centered(box, 10)));
-    
+    pen.println("eqv test 2 (same TB) -> should be true, is " + TBUtils.eqv(new Centered(box, 15), new Centered(box, 15)));
+    pen.println("equal test 1 (different widths) -> should be false, is " + TBUtils.equal(new Centered(box, 12), new Centered(box, 10)));
     /**
      * COMPOSITION TESTS
      */

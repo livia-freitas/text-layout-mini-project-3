@@ -69,12 +69,27 @@ public class TBUtils {
     return lotsOfSpaces.substring(0, len);
   } // spaces(int)
 
-  /**
-   * static boolean equal(TextBlock t1, TextBlock t2){ if(t1.height() != t2.height() || t1.width()
-   * != t2.width()){ return false; } else{ for(int i = 0; i < t1.height(); i++){ String t1_row =
-   * t1.TextBlock.row(i); String t2_row = t2.TextBlock.row(i); if(!t1_row.equals(t2_row)){ return
-   * false; } } } return true; }
-   */
+
+  static boolean equal(TextBlock t1, TextBlock t2) {
+    if (t1.height() != t2.height() || t1.width() != t2.width()) {
+      return false;
+    } else {
+      for (int i = 0; i < t1.height(); i++) {
+        try {
+          String t1_row = t1.row(i);
+          String t2_row = t2.row(i);
+          if (!(t1_row.equals(t2_row))) {
+            return false;
+          }
+        } catch (Exception e) {
+          continue;
+        }//catch
+      }//for
+    }//else
+    return true;
+  }//equal()
+
+
 
   static boolean eq(TextBlock t1, TextBlock t2) {
     if (t1 == t2) {
@@ -119,14 +134,14 @@ public class TBUtils {
     if (!(t1.getClass() == t2.getClass())) { // checks if objects are same kind of TextBlock
       return false;
     } else {
-      for (int i = 0; i < t1Contents.length; i++) { 
-        if (t1Contents[i].equals(t2Contents[i])) { //checks if contents are the same
-          continue; 
+      for (int i = 0; i < t1Contents.length; i++) {
+        if (t1Contents[i].equals(t2Contents[i])) { // checks if contents are the same
+          continue;
         } else { // if contents are not the same, return false
           return false;
         } // else
       } // for
     } // else
     return true;
-  }//eqv
+  }// eqv
 } // class TBUtils
