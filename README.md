@@ -1,8 +1,8 @@
 # text-layout-mini-project-3
 
-Author: Livia Stein Freitas
+## Author: Livia Stein Freitas
 
-Built for Samuel Rebelsky's CSC207: Object Oriented Problem Solving (Grinnell College Fall 2023) course.
+### Built for Samuel Rebelsky's CSC207: Object Oriented Problem Solving (Grinnell College Fall 2023) course.
 A project that implements new text layout and text block methods. 
 
 **Acknowledgements**
